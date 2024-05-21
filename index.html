@@ -13,9 +13,19 @@
         <h1>Accidents Vision AI</h1>
     </header>
     <main>
-        <section class="map-container">
-            <div id="map"></div>
-        </section>
+        <div id="map"></div>
+        <div class="slider-container">
+            <label for="time-range">Выберите время прогноза:</label>
+            <input type="range" id="time-range" min="0" max="4" step="1" value="0">
+            <div class="slider-labels">
+                <span>0</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </div>
+            <button id="ok-button">ОК</button>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Accidents Vision AI. Все права защищены.</p>
