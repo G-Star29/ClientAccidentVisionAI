@@ -24,9 +24,23 @@ function init() {
                 const coords = key.split(',').map(Number);
                 const probability = data[key];
 
+                let color;
+                if (probability > 0.8) {
+                    color = 'red';
+                } else if (probability > 0.6) {
+                    color = 'orange';
+                } else if (probability > 0.5) {
+                    color = 'yellow';
+                } else {
+                    color = 'gray';
+                }
+
                 var placemark = new ymaps.Placemark(coords, {
                     hintContent: `Вероятность: ${probability}`,
                     balloonContent: `Координаты: ${coords.join(', ')}<br>Вероятность: ${probability}`
+                }, {
+                    preset: 'islands#circleIcon',
+                    iconColor: color
                 });
 
                 map.geoObjects.add(placemark);
