@@ -28,7 +28,7 @@ main {
 
 #map {
     flex: 1;
-    height: calc(100vh - 40px); /* Высота карты минус высота header */
+    height: calc(100vh - 140px); /* Высота карты минус высота header и footer */
 }
 
 .slider-container {
@@ -44,8 +44,7 @@ main {
     align-items: center;
 }
 
-.slider-container label
-{
+.slider-container label {
     margin-bottom: 10px;
 }
 
