@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Статистика - Accidents Vision AI</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="statistics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -13,10 +14,20 @@
     </header>
     <main>
         <h2>Статистика</h2>
-        <!-- Добавьте здесь содержимое страницы статистики -->
+        <div class="chart-container">
+            <canvas id="accidentsChart"></canvas>
+        </div>
+        <div class="year-selector">
+            <label for="yearSelect">Выберите год:</label>
+            <select id="yearSelect"></select>
+        </div>
+        <div class="chart-container">
+            <canvas id="featuresChart"></canvas>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Accidents Vision AI. Все права защищены.</p>
     </footer>
+    <script src="statistics.js"></script>
 </body>
 </html>

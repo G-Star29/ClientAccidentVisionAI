@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Accidents Vision AI</title>
+    <link rel="stylesheet" href="statistics_models.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="statistics_models.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Statistics</h1>
+        <a href="index.html" class="back-link">Главная</a>
+    </header>
+    <main>
+        <div class="charts-container">
+            <h2>Общая Статистика Моделей</h2>
+            <div class="chart">
+                <canvas id="aucRocChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="logLossChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="meanCvScoreChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="stdCvScoreChart"></canvas>
+            </div>
+        </div>
+        <div class="model-selector">
+            <label for="modelSelect">Выберите модель:</label>
+            <select id="modelSelect"></select>
+        </div>
+        <div class="selected-model-chart">
+            <h2>График Выбранной Модели</h2>
+            <img id="calibrationCurve" alt="Calibration Curve" src="">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Accidents Vision AI. Все права защищены.</p>
+    </footer>
+</body>
+</html>
